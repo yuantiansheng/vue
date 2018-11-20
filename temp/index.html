@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+
+<!--插值-->
+<div id="app">
+    <span>Message :{{msg}}</span><br>
+    <!--<span v-once>这个Message将不会改变：{{msg}}</span>-->
+    <p>Using mustaches:{{rawHtml}}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+</div>
+
+<!--特性-->
+<div id="app1">
+    <div v-bind:id="dynamicId">dynamicId</div>
+    <button v-bind:disabled="isButtonDisabled">Button</button>
+</div>
+
+<!--使用JavaScript表达式-->
+<div id="app2">
+    <div>{{ number + 1 }}</div>
+    <div>{{ ok ? 'YES' : 'NO' }}</div>
+    <div>{{ message.split('').reverse().join('') }}</div>
+</div>
+
+<div id="app3">
+    <a v-bind:href="url">...</a>
+    <a v-on:click="doSomething">...</a>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

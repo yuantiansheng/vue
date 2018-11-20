@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 实例</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <p>{{foo}}</p>
+    <!--这里的 foo 不会更新-->
+    <button v-on:click="foo='baz'">change it</button>
+</div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
